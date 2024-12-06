@@ -23,13 +23,17 @@ def about(request):
 
 
 def projects(request):
-    projects = list(Project.objects.values())
-    return render(request, 'project.html')
-
-# 1:32;00
+    # projects = list(Project.objects.values())
+    projects = Project.objects.all()
+    return render(request, 'projects.html', {
+        'projects': projects
+    })
 
 
 def task(request):
-   # task = Task.objects.get(title=title)
-   # task = get_object_or_404(Task, id=id)
-    return render(request, 'tasks.html')
+    # task = Task.objects.get(title=title)
+    # task = get_object_or_404(Task, id=id)
+    tasks = Task.objects.all()
+    return render(request, 'tasks.html', {
+        'tasks': tasks
+    })
