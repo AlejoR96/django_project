@@ -5,7 +5,10 @@ from .models import Project, Task
 
 
 def index(request):
-    return render(request, 'index.html')
+    title = 'Django Course!!!'
+    return render(request, 'index.html', {
+        'title': title
+    })
 
 
 def hello(request, username):
@@ -13,7 +16,10 @@ def hello(request, username):
 
 
 def about(request):
-    return render(request, 'about.html')
+    username = 'Alejandro'
+    return render(request, 'about.html', {
+        'username': username
+    })
 
 
 def projects(request):
