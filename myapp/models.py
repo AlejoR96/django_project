@@ -11,3 +11,5 @@ class Task(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
+
+# Se deja video en 1:19:59
