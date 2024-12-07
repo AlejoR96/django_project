@@ -1,8 +1,13 @@
 {% extends 'layouts/base.html' %}
 
+{% load static %}
+
 {% block content %}
 
 <h1> {{ title }}</h1>
+
+<img src="{% static 'jr.jpg' %}" alt="" width="100">
+
 <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, modi. Necessitatibus provident commodi doloremque. Possimus impedit commodi, sunt ut ullam, minus explicabo iure aliquid magnam esse dolore. At, deleniti vitae?</p>
 
 {% endblock %}
